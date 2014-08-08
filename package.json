@@ -1,0 +1,35 @@
+{
+	"name": "gulp-cdn-absolute-path",
+	"version": "0.0.1",
+	"description": "A gulp plugin for replacing local path with cdn absolute path",
+	"license": "MIT",
+	"keywords": [
+		"absolutepath",
+		"cdn",
+		"gulpplugin"
+	],
+	"author": {
+		"name": "anhulife",
+		"email": "anhulife@gmail.com"
+	},
+	"homepage": "https://github.com/anhulife/gulp-cdn-absolute-path",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:anhulife/gulp-cdn-absolute-path.git"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"files": [
+		"index.js"
+	],
+	"dependencies": {
+		"gulp-util": "^3.0.0",
+		"through2": "^0.5.1"
+	},
+	"devDependencies": {
+		"concat-stream": "^1.4.6",
+		"gulp": "^3.8.7",
+		"mocha": "*"
+	}
+}
