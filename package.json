@@ -1,6 +1,6 @@
 {
 	"name": "gulp-cdn-absolute-path",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A gulp plugin for replacing local path with cdn absolute path",
 	"license": "MIT",
 	"keywords": [

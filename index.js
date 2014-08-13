@@ -11,6 +11,10 @@ module.exports = function (options) {
 
 	cdn = options.cdn;
 
+	if(!/\/$/.test(cdn)){
+		cdn = cdn + '/';
+	}
+
 	asset = options.asset || process.cwd();
 
 	assetAbsolute = path.resolve(asset);
