@@ -19,7 +19,7 @@ module.exports = function (options) {
 
 	assetAbsolute = path.resolve(asset);
 
-	reg = new RegExp('["\'\\(]\\s*([\\w\\_\/\\.]*\\.('+ (options.exts ? options.exts.join('|') : 'jpg|jpeg|png|gif|cur|js|css') +'))(\\?.*)?\\s*[\\)"\']', 'gim');
+	reg = new RegExp('["\'\\(]\\s*([\\w\\_\/\\.\\-]*\\.('+ (options.exts ? options.exts.join('|') : 'jpg|jpeg|png|gif|cur|js|css') +'))(\\?[\\w\\_\\=\\-]+)?\\s*[\\)"\']', 'gim');
 
 	return through.obj(function (file, enc, callback) {
 		if (file.isNull()) {
