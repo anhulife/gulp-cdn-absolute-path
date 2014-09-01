@@ -41,7 +41,9 @@ module.exports = function (options) {
 				if(mainPath.indexOf(assetAbsolute) !== -1){
 					relative = path.relative(asset, path.resolve(asset, mainPath, filePath));
 				}
-			}else{
+			}else if(/^\//.test(filePath)){
+        relative = filePath.replace(/^\//, '');
+      }else{
 				relative = filePath;
 			}
 			return relative ? content.replace(filePath, url.resolve(cdn, relative)) : content;
