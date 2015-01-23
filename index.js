@@ -37,14 +37,12 @@ module.exports = function (options) {
 		contents = file.contents.toString().replace(reg, function(content, filePath){
 			var relative;
 
-			if(/^\.\./.test(filePath)){
+			if(/^\//.test(filePath)){
+				relative = filePath.replace(/^\//, '');
+			}else{
 				if(mainPath.indexOf(assetAbsolute) !== -1){
 					relative = path.relative(asset, path.resolve(asset, mainPath, filePath));
 				}
-			}else if(/^\//.test(filePath)){
-        relative = filePath.replace(/^\//, '');
-      }else{
-				relative = filePath;
 			}
 			return relative ? content.replace(filePath, url.resolve(cdn, relative)) : content;
 		});
